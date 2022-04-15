@@ -13,7 +13,7 @@ const createAutoComplete = ({ root, renderOption, onOptionSelect, inputValue, fe
     const dropdown = root.querySelector('.dropdown');
     const resultsWrapper = root.querySelector('.results');
 
-    const onInput = async event => {
+    const onInput = async (event) => {
         const items = await fetchData(event.target.value);
 
         if (!items.length) {
